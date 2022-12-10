@@ -1,0 +1,241 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  position: relative;
+}
+
+body {
+  overflow-y: auto;
+  min-height: 100vh;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none !important;
+}
+footer {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 16px 0px;
+  color: #999;
+  vertical-align: bottom;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;  
+}
+
+.banner {
+  height: 500px;
+  width: 100%;
+  background: #999;
+  margin: 20px 0px;
+}
+
+.content {
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ================================== */
+/* Layout page CSS */
+/* ================================== */
+
+.tile {
+  /* TODO: MODULE_CARDS */
+  /* 1. Fill in the required properties. */
+  position:relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.tile img {
+  /* TODO: MODULE_CARDS */
+  /* 1. Fill in the required properties. */
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: 0.2s all;
+}
+.tile img:hover {
+  /* TODO: MODULE_CARDS */
+  /* 1. Fill in the required properties. */
+  transform: scale(1.1);
+  filter: brightness(0.6);
+}
+
+/* Hint: Notice the position:absolute and z-index properties. */
+/* Think about how those in relation to the existing "tile" classes. */
+.tile-text {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  opacity: 1;
+  width: 100%;
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/hero.jpg");
+  background-size: contain;
+
+  /* TODO: MODULE_LAYOUT */
+  /* 1. Set a specific height. */
+  height: 60vh;
+  /* 2. Position and center the image to scale nicely on all screens. */
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-subheading {
+  font-size: 24px;
+  font-weight: 100;
+}
+ .hero-image h2,.hero-subheading{
+  text-align: center;
+}
+.hero-input {
+  width: 80%;
+  height: 50px;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  max-width: 75vw;
+}
+
+.nav-link {
+  margin-right: 36px;
+}
+.nav-items{
+  float: right;
+}
+@media screen and (max-width:576px){
+  .nav-items{
+    float: left;
+    clear: left;
+  }  
+}
+
+
+/* ================================== */
+/* Adventures grid page CSS */
+/* ================================== */
+
+.adventure-card {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+
+
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.adventure-card img {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  transition: 0.2s all;
+}
+.adventure-card img:hover {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+  filter: brightness(0.6);
+
+}
+.card-body {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .card-body{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+}
+.card-body p{
+  margin-bottom: 0px;
+}
+
+/* ================================== */
+/* Adventure details page CSS */
+/* ================================== */
+.img-col-1{
+  flex-basis: 66%;
+}
+.img-col-2{
+  flex-basis: 33%;
+}
+.img-col-1 img, .img-col-2 img{
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+}
+.adventure-detail-card {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+  margin: 8px;
+  padding: 8px;
+  height: fit-content;
+}
+
+.adventure-detail-card p{
+}
+.adventure-card>p>a:link{
+  color: yellow;
+}
+.adventure-card-image {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+}
+.adventure-card-image:hover {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+}
+@media screen and (min-width: 992px){
+  .adventure-detail-card{
+    flex-basis: 66%;
+  }
+  .side-panel{
+    /* flex-basis: 33%; */
+    width: 30%;
+    position: fixed;
+    left: 66%;
+  }
+}
+.experience-heading p{
+  color: #948f8e;
+  margin-bottom: 0px;
+}
+.experience-content ul li {
+  margin-left: 16px;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktops phones: */
+  #reservation {
+    width: 400px;
+    position: fixed;
+  }
+}
